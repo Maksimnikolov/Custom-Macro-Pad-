@@ -15,3 +15,22 @@ You can view this journal in more detail on **Hack Club Blueprint** [here](https
 Came up with the idea of a stream deck I started to research all the materials and how much it would be. found these SSD1306 0.42 OLED online. I brainstormed how many keys I would need I will try and get 12 keys with background images and a custom 3d printed case. ![st.jpg](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTU3LCJwdXIiOiJibG9iX2lkIn19--016ccff21dab847e323b9f483d74a911c24b7c7b/st.jpg)
   
 
+## 10/4/2025 - Tutorials, Walkthroughs, Pcb Work  
+
+I watched a lot of tutorials and a lot of peoples stream deck projects. I also had no clue how to make my own pcb. After some videos I started to experiment. I also found what parts Im going to use and got it under 50 dollars. I still need help designing a pcb but im working on it. Core Electronics
+1× Raspberry Pi Pico (or Pico W)
+8× 0.96" SPI OLED displays
+1× 74HC595 shift register
+Buttons
+8× Kailh Choc low-profile switches
+Connectors
+1× USB-C connector
+Pin headers (for displays or Pico, if needed)
+Passive Components
+8× 0.1 µF capacitors (decoupling)
+PCB and Hardware
+1× custom PCB (120 mm × 70 mm)
+4× M2.5 screws
+4× M2.5 standoffs![Screenshot 2025-10-04 at 4.13.45 PM.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDEzLCJwdXIiOiJibG9iX2lkIn19--d6f6be87e61f34ff4e00d949da608d2724663fec/Screenshot%202025-10-04%20at%204.13.45%E2%80%AFPM.png)
+  
+
