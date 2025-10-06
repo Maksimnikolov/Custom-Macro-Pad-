@@ -34,3 +34,8 @@ PCB and Hardware
 4× M2.5 standoffs![Screenshot 2025-10-04 at 4.13.45 PM.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDEzLCJwdXIiOiJibG9iX2lkIn19--d6f6be87e61f34ff4e00d949da608d2724663fec/Screenshot%202025-10-04%20at%204.13.45%E2%80%AFPM.png)
   
 
+## 10/6/2025 - PcB  
+
+Here is the PCB I will use. I also decided that I will have 1 screen instead of 8. makes it more cost efficient. Started to look into making the software for the stream deck it will be coding in P![Screenshot 2025-10-06 at 12.08.33 PM.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6Nzc1LCJwdXIiOiJibG9iX2lkIn19--4d4885b39651385093ea00c39b00622f99bc84f3/Screenshot%202025-10-06%20at%2012.08.33%E2%80%AFPM.png)
+ython. I think I should be ready to ship this out after this journal.  
+
