@@ -1,0 +1,9 @@
+Part,Description,Quantity,Unit Price (USD),Total Price (USD),Reference,Notes
+ESP8266 WEMOS D1 Mini V4,Microcontroller with USB-C,1,1.23,1.23,U1,Low-cost Wi-Fi development board
+128x160 TFT Display,Color display for key icons,4,4.52,18.08,DISP1-DISP4,ST7735 module
+Kailh Choc Low-Profile Switch,Low-profile mechanical switch,4,0.61,2.44,SW1-SW4,Linear switch
+Custom PCB,Printed circuit board for layout,1,5.00,5.00,PCB1,Estimated cost for small batch
+Carbon Fiber Top Plate,1mm thick,1,16.75,16.75,TOP1,Matt finish, 200mm x 250mm
+Acrylic Keycaps,4.5mm thick,4,1.00,4.00,KEY1-KEY4,Custom or off-the-shelf
+M2 Low-Profile Screws,Screws for assembly,4,0.10,0.40,HW1-HW4,Estimated cost
+M2 Low-Profile Standoffs,Standoffs for mounting,4,0.15,0.60,ST1-ST4,Estimated cost
