@@ -1,68 +1,135 @@
-Max Deck
+# Max Deck
+
 Max Deck is an open-source, customizable macro keypad that displays a unique image behind every key. It was created as an affordable alternative to commercial macro devices while still offering flexibility, software control, and extendable features.
-The device can switch between multiple profiles, assign shortcuts to each key, and update its display based on the active application. A companion desktop app makes setup and configuration fast and beginner-friendly.
-Overview
-Max Deck connects to your computer over USB and communicates through a simple serial interface. Once configured, it runs in the background and listens for button presses, sending keystrokes or launching applications based on your settings.
-The project includes both firmware (for the microcontroller) and a desktop GUI for managing images and macros.
-Key Features
-Individual icon for every button
-Multiple profiles with different macro sets
-Optional automatic switching based on active application
-Supports launching software directly from the keypad
-MQTT compatibility for smart home use
-Easy image uploading through the GUI
-Works without needing to install Python libraries manually
-Desktop Software
-A ready-to-use application is included for both Windows and macOS, as well as the full Python source code.
+
+The device supports multiple profiles, assigns shortcuts to each key, and can automatically update its display based on the active application. A companion desktop app makes setup and configuration simple and beginner-friendly.
+
+---
+
+## Overview
+
+Max Deck connects to your computer over USB and communicates through a serial interface. After setup, it runs in the background and listens for button presses, triggering keystrokes or launching applications as assigned.
+
+The project includes:
+- Firmware for the microcontroller  
+- A desktop GUI for managing images and macros
+
+---
+
+## Key Features
+
+- Individual icon for every button  
+- Multiple profiles with different macro sets  
+- Automatic switching based on the active application (optional)  
+- Launch applications directly from the keypad  
+- MQTT support for home automation  
+- Easy image uploading through the GUI  
+- No manual Python library installation required
+
+---
+
+## Desktop Software
+
+The project includes a ready-to-use application for both Windows and macOS, as well as the full Python source code.
+
 You can:
-Upload custom images
-Assign macros to any button
-Record keypresses directly in the app
-Choose colors for display icons
-Link profiles to specific applications
-Once configured, the app can run silently in the background and handle keystrokes on demand.
-Note:
-Automatic profile switching currently functions only on Windows. The macOS version has been tested on macOS Big Sur (11.6).
-Images
-When you upload an image, the software automatically converts it to the correct format and size. You can assign a color during upload, and dark parts of the image will appear in that color. For icons with multiple colors, you can modify the firmware directly.
-Macros
-Keyboard commands are handled using the pynput library. You can enter macros manually or use the built-in key recorder.
-Examples:
-Typing a word character by character
-Sending key combinations like Control+Shift+S
-Triggering external scripts or hotkeys
-For complex workflows, you can map keys to unused combinations and handle the rest with tools like AutoHotKey.
-Application-Based Switching
-Max Deck can adapt its key layout based on what you’re doing. You can assign each profile to a program name, and the desktop app will update the keypad automatically.
-There are three optional behaviors:
-Open an application when switching folders on the keypad
-Focus an app before sending its macros
-Change to the correct profile when a program becomes active
-Firmware
-The firmware runs on an ESP8266-based board and stores bitmap images in SPIFFS so they persist after power-off.
-When a key is pressed, the device sends its ID over USB serial. The companion software reacts by triggering the associated macro or command.
-All firmware files are included in the code folder, and default builds can be flashed with standard Arduino tools.
-MQTT Integration
-Max Deck can also operate as a smart home controller. An example firmware version is included that sends button numbers over MQTT to a topic of your choice. This can be used with services like Home Assistant.
-Images can still be stored onboard and updated via the desktop app.
-Future support may allow MQTT setup directly through the GUI.
-Hardware Notes
-Refer to the included BOM for all electronic and mechanical parts.
-Key components include:
-ESP8266 (WEMOS D1 Mini V4 with USB-C)
-128×160 TFT display
-Low-profile M2 fasteners
-Custom PCB
-3D printed and/or CNC machined parts
-The exact display model and pinout must match the PCB footprint.
-Printed & Machined Parts
-3D Printed Components
-All printed parts are designed to print without supports. Each piece has an optimal orientation shown in the project files.
-Machined Components
-Carbon fiber top plate (1 mm)
-Acrylic keycaps (4.5 mm, identical pieces)
-If CNC equipment is unavailable, keycaps can be produced from stacked laser-cut acrylic or printed in clear resin and polished.
-PCB Files
-A zipped Gerber set is included and ready for board fabrication through any PCB manufacturer.
-Advanced Image Customization
-For multicolor icons, edits can be made directly in the firmware. The Code folder includes additional details and examples.
+- Upload custom images  
+- Assign macros to any button  
+- Record keypresses directly from the GUI  
+- Select icon colors  
+- Link profiles to specific applications  
+
+Once configured, the app can run silently in the background and handle keystrokes automatically.
+
+**Note:**  
+Automatic profile switching currently works only on Windows. The macOS version has been tested on macOS Big Sur (11.6).
+
+---
+
+## Images
+
+When uploading an image, the software automatically converts it to the correct format and size. You can pick a color during upload, and darker sections of the image will display in that color. For multi-color icons, modifications can be made directly in the firmware.
+
+---
+
+## Macros
+
+Keyboard input is handled using the `pynput` library. You can enter macros manually or record them in the GUI.
+
+Examples include:
+- Typing words character by character  
+- Sending key combinations (e.g., Ctrl + Shift + S)  
+- Running scripts or shortcuts  
+
+For complex workflows, you can assign unused key combinations and manage them using tools like AutoHotKey.
+
+---
+
+## Application-Based Switching
+
+Max Deck can change its key layout dynamically based on what you're doing. Each profile can be assigned to a specific application, and the software will update the keypad accordingly.
+
+Available behaviors:
+1. Launch an application when navigating to its folder on the keypad  
+2. Focus an application before sending its macros  
+3. Switch the displayed profile based on the active window
+
+---
+
+## Firmware
+
+The firmware runs on an ESP8266 board and stores bitmap images in SPIFFS, ensuring they remain available after power-off.
+
+When a button is pressed, the device sends its ID over USB serial. The companion software then fires the corresponding macro or command.
+
+All firmware files are located in the `Code` folder, and default builds can be flashed using standard Arduino tools.
+
+---
+
+## MQTT Integration
+
+Max Deck can also be used as a smart home controller. An alternative firmware example is provided that publishes button numbers via MQTT to a configurable topic, making it compatible with platforms like Home Assistant.
+
+Images can still be stored on the device and updated using the GUI. Future updates may allow MQTT setup directly from the desktop software.
+
+---
+
+## Hardware Notes
+
+Refer to the included BOM for the complete list of required components.
+
+Core hardware includes:
+- ESP8266 (WEMOS D1 Mini V4 with USB-C)  
+- 128×160 TFT display  
+- Low-profile M2 fasteners  
+- Custom PCB  
+- 3D printed and/or CNC machined parts  
+
+Make sure the display’s pinout and hole pattern match the PCB design.
+
+---
+
+## Printed & Machined Parts
+
+### 3D Printed Components
+All printed parts can be produced without supports. Orientation guidelines are included in the project files.
+
+### Machined Components
+- Carbon fiber top plate (1 mm)  
+- Acrylic keycaps (4.5 mm, identical shape)
+
+If CNC equipment isn’t available, keycaps can be made from layered laser-cut acrylic or printed using clear resin and polished.
+
+---
+
+## PCB Files
+
+Gerber files are included in a zipped folder and can be sent to any PCB manufacturer.
+
+---
+
+## Advanced Image Customization
+
+For multi-color icons, changes can be made directly in the firmware. The `Code` directory contains instructions and examples for manual customization.
+
+---
